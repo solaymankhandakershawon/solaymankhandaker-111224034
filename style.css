@@ -60,6 +60,7 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .logo span {
@@ -91,6 +92,7 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s, color 0.3s;
 }
 
 .theme-btn:hover {
@@ -206,6 +208,58 @@ header {
     margin-bottom: 8px;
 }
 
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.cert-box {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-box:hover {
+    transform: translateY(-4px);
+}
+
+.cert-box h3 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.cert-box p {
+    color: var(--subtext-color);
+    font-size: 0.96rem;
+}
+
+.cert-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+.cert-btn:hover {
+    background-color: var(--primary-hover);
+}
+
 /* Contact Section */
 .contact-card {
     text-align: center;
@@ -258,80 +312,4 @@ footer {
     .hero h1 {
         font-size: 1.8rem;
     }
-}
-.cert-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.cert-issuer {
-    font-weight: 600;
-}
-
-.cert-date {
-    font-size: 0.92rem;
-    opacity: 0.85;
-}
-
-.cert-link {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    width: fit-content;
-    padding: 7px 14px;
-    border-radius: 8px;
-    border: 1px solid currentColor;
-}
-
-.cert-link:hover {
-    opacity: 0.85;
-}
-
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-}
-
-.cert-box {
-    background-color: var(--card-bg, #ffffff);
-    border: 1px solid var(--border-color, #e2e8f0);
-    border-radius: 14px;
-    padding: 22px;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.cert-box h3 {
-    color: var(--primary-color, #2563eb);
-    font-size: 1.15rem;
-    margin-bottom: 4px;
-}
-
-.cert-box p {
-    color: var(--muted-text, #475569);
-    font-size: 0.96rem;
-}
-
-.cert-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background-color: var(--primary-color, #2563eb);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.92rem;
-    width: fit-content;
-}
-
-.cert-btn:hover {
-    background-color: var(--primary-hover, #1d4ed8);
 }
